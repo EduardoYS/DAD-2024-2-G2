@@ -1,9 +1,5 @@
 server:
   port: 7070
-
-
-
-
 spring:
   application:
     name: config-server
@@ -11,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/EduardoYS/DAD-2024-2-G2.git # ruta del repositorio git
+          uri: https://github.com/EduardoYS/DAD-2024-2-G2 # ruta del repository git
           searchPaths: config-data
           default-label: main
   security:
