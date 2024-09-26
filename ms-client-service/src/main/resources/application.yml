@@ -1,22 +1,7 @@
-
-
 spring:
   application:
     name: ms-client-service
   profiles:
     active: development
   config:
-    import: optional:configserver:http://root:123456@localhost:7070
-  datasource:
-    url: jdbc:mysql://localhost:3306/catalog
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update # O 'create', 'validate', 'none', dependiendo de tus necesidades
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect # Cambia esto si usas una versión diferente de MySQL o una base de datos diferente
-  tomcat:
-    max-threads: 200
+    import: optional:configserver:http://root:s3cr3t@localhost:7070

@@ -12,32 +12,32 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/client")
 public class ClientController {
-    @Autowired
-    private ClientService clientService;
+    private  ClientService clientService;
+
+    public ClientController(ClientService clientService) {
+        this.clientService = clientService;
+    }
 
     @GetMapping
-    public ResponseEntity<List<Client>> list() {
+    public ResponseEntity<List<Client>> List() {
         return ResponseEntity.ok(clientService.list());
     }
-
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Client>> getById(@PathVariable(required = true) Integer id) {
+    public ResponseEntity<Optional<Client>> getById(@PathVariable (required = true)Integer id) {
         return ResponseEntity.ok(clientService.getById(id));
     }
-
     @PostMapping
     public ResponseEntity<Client> save(@RequestBody Client client) {
         return ResponseEntity.ok(clientService.save(client));
     }
-
     @PutMapping("/{id}")
-    public ResponseEntity<Client> update(@PathVariable(required = true) Integer id, @RequestBody Client client) {
+    public ResponseEntity<Client> update(@PathVariable (required = true)Integer id, @RequestBody Client client) {
         return ResponseEntity.ok(clientService.update(id, client));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<List<Client>> delete(@PathVariable(required = true) Integer id) {
+    public ResponseEntity<List<Client>> delete(@PathVariable (required = true)Integer id) {
         clientService.delete(id);
-        return ResponseEntity.ok(clientService.list());
+        return  ResponseEntity.ok(clientService.list());
     }
 }

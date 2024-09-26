@@ -1,21 +1,16 @@
-server:
-  port: 8081
-springdoc:
-  api-docs:
-    enabled: true
-  swagger-ui:
-    enabled: true
-    path: /doc/swagger-ui.html
 spring:
+  application:
+    name: ms-client-service
   jpa:
-    hibernate.ddl-auto: update
-    generate-ddl: true
+    hibernate:
+      ddl-auto: update
     show-sql: true
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/catalog
+    url: jdbc:mysql://localhost:3306/ms_client
     username: root
     password: s3cr3et
+
 
 eureka:
   client:

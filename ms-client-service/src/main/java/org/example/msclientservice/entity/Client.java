@@ -15,5 +15,4 @@ public class Client {
     private String name;
     private String documentNumber;
     private Boolean state;
-
 }
