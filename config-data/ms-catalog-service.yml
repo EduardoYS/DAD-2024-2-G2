@@ -15,7 +15,7 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/catalog
     username: root
-    password: s3cr3et
+    password:
 
 eureka:
   client:
