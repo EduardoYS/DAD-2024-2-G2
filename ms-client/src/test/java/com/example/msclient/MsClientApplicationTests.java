@@ -1,10 +1,10 @@
-package org.example.msclientservice;
+package com.example.msclient;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MsClientServiceApplicationTests {
+class MsClientApplicationTests {
 
 	@Test
 	void contextLoads() {
